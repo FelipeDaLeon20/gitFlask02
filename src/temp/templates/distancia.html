@@ -1,0 +1,18 @@
+
+{% extends "layout.html"%}
+{% import "_macros.html" as macro %}
+    {% block container %}
+
+        <h1>Distancia</h1>
+        <form action="" method="post">
+            {{ datos_macro.datos ('x1', 'X1') }}
+            {{ datos_macro.datos ('y1', 'Y1') }}
+            {{ datos_macro.datos ('x2', 'X2') }}
+            {{ datos_macro.datos ('y2', 'Y2') }}
+
+            <button type="submit" class="btn btn-primary"> Calcular</button>
+
+        </form>
+        <h2>Resultado: {{res}}</h2>
+
+    {% endblock %}

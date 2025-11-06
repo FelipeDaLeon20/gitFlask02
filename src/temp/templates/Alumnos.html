@@ -1,0 +1,19 @@
+{% extends "layout.html"%}
+{% import "_macros.html" as macro %}
+    {% block container %}
+
+    <form action="" method="post" novalidate>
+        {{ macro.camposNuevos(form.matricula) }}
+        {{ macro.camposNuevos(form.nombre) }}
+        {{ macro.camposNuevos(form.apellido) }}
+        {{ macro.camposNuevos(form.correo) }}
+
+        <input type="submit" value="Guardar" class="btn btn-primary">
+    </form>
+
+    <h2>Matricula: {{mat}}</h2>
+    <h2>Nombre: {{nom}}</h2>
+    <h2>Apellido: {{ape}}</h2>
+    <h2>Correo: {{email}}</h2>
+
+    {% endblock %}
